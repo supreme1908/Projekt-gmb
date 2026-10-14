@@ -1,0 +1,1 @@
+// Dziedziczy po klasie Pojazd, dodatkowe pole: pojemnoscSilnika. Wyświetla informacje o motocyklu.
