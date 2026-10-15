@@ -1,4 +1,5 @@
 // Dziedziczy po klasie Pojazd dodatkowe pole: liczbaDrzwi oraz pojemnoscSilnika(pomysł pana krzysia). Wyświetla informacje o samochodzie.
+
 public class Samochod extends Pojazd {
     private int liczbaDrzwi;
     private int pojemnoscSilnika;
