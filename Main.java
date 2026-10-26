@@ -20,7 +20,8 @@ public class Main {
             System.out.println("=== MENU ZARZĄDZANIA POJAZDAMI ===");
             System.out.println("1. Wyświetl informacje o wszystkich pojazdach");
             System.out.println("2. Dodaj samochód");
-            System.out.println("3. Wyjście");
+            System.out.println("3. Dodaj samochód");
+            System.out.println("4. Wyjście");
             System.out.print("Wybierz opcję: ");
             wybor = scanner.nextInt();
             scanner.nextLine(); // Odbiera Enter, żeby można było wpisać markę.
@@ -64,13 +65,37 @@ public class Main {
                     System.out.println("Dodano samochód!");
                     break;
                 case 3:
+                System.out.print("Podaj markę: ");
+                    String marka = scanner.nextLine();
+
+                    System.out.print("Podaj model: ");
+                    String model = scanner.nextLine();
+
+                    System.out.print("Podaj rok produkcji: ");
+                    int rok = scanner.nextInt();
+
+                    System.out.print("Podaj pojemność silnika w cm3: ");
+                    int pojemnosc = scanner.nextInt();
+                    scanner.nextLine(); // Odbiera pozostawiony Enter (nie wiem jak to działa podpowiedział mi copilot)
+
+                    System.out.print("Podaj typ motocykla: ");
+                    String typ = scanner.nextLine();
+
+                    Samochod nowySamochod = new Samochod(
+                        marka, model, rok, pojemnosc, typ
+                    );
+
+                    pojazdy.add(nowyMotocykl);
+                    System.out.println("Dodano Motocykl!");
+                    break;
+                case 4:
                     System.out.println("Koniec programu.");
                     scanner.close(); // Zamyka skaner.
                     return; // Kończy metodę main(), czyli działanie programu by nie wyświetlać znowu tego samego.
                 default:
                     System.out.println("Nieprawidłowy wybór. Spróbuj ponownie.");
             }
-        } while (wybor != 3);
+        } while (wybor != 4);
 
     System.out.println("=== SYSTEM ZARZADZANIA POJAZDAMI ===");
     
