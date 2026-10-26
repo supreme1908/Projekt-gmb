@@ -20,7 +20,7 @@ public class Main {
             System.out.println("=== MENU ZARZĄDZANIA POJAZDAMI ===");
             System.out.println("1. Wyświetl informacje o wszystkich pojazdach");
             System.out.println("2. Dodaj samochód");
-            System.out.println("3. Dodaj samochód");
+            System.out.println("3. Dodaj motocykl");
             System.out.println("4. Wyjście");
             System.out.print("Wybierz opcję: ");
             wybor = scanner.nextInt();
@@ -66,23 +66,23 @@ public class Main {
                     break;
                 case 3:
                 System.out.print("Podaj markę: ");
-                    String marka = scanner.nextLine();
+                    String marka1 = scanner.nextLine();
 
                     System.out.print("Podaj model: ");
-                    String model = scanner.nextLine();
+                    String model1 = scanner.nextLine();
 
                     System.out.print("Podaj rok produkcji: ");
-                    int rok = scanner.nextInt();
+                    int rok1 = scanner.nextInt();
 
                     System.out.print("Podaj pojemność silnika w cm3: ");
-                    int pojemnosc = scanner.nextInt();
+                    int pojemnosc1 = scanner.nextInt();
                     scanner.nextLine(); // Odbiera pozostawiony Enter (nie wiem jak to działa podpowiedział mi copilot)
 
                     System.out.print("Podaj typ motocykla: ");
-                    String typ = scanner.nextLine();
+                    String typ1 = scanner.nextLine();
 
-                    Samochod nowyMotocykl = new Motocykl(
-                        marka, model, rok, pojemnosc, typ
+                    Motocykl nowyMotocykl = new Motocykl(
+                        marka1, model1, rok1, pojemnosc1, typ1
                     );
 
                     pojazdy.add(nowyMotocykl);
