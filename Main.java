@@ -81,7 +81,7 @@ public class Main {
                     System.out.print("Podaj typ motocykla: ");
                     String typ = scanner.nextLine();
 
-                    Samochod nowySamochod = new Samochod(
+                    Samochod nowyMotocykl = new Motocykl(
                         marka, model, rok, pojemnosc, typ
                     );
 
